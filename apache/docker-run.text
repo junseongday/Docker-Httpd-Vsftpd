@@ -1,5 +1,5 @@
 docker build -t apache-ftp .
 
-
+# /Users/apache 이부분을 현제 소스가 위치한 경로로 리플레이스! 
 docker run -p 90:80 -p 50001:21 -p 30001:30001 -d --name apache -v /Users/apache/httpd.conf:/usr/local/apache2/conf/httpd.conf -v /Users/apache/htmlfiles:/usr/local/apache2/htdocs -v /Users/apache/sites:/usr/local/apache2/conf/sites apache-ftp
 
